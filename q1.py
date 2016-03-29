@@ -4,5 +4,14 @@
 #   Example 3: if your balance is 25, then your program should return 10. 
 #   Example 4: if your balance is 8, then your program should return 8. 
 
+#the minimum payment is 10 dollars or 2.1% of the balance so if the customers balance is below 10 it will automatically be 10
+
 def computeMinimumPayment( balance ):
     #TODO write code inside this function that achieves the functionality described above
+    percentage = balance * 0.021
+    if balance < 10:
+        return balance
+    elif percentage < 10:
+        return 10
+    else:
+        return percentage
